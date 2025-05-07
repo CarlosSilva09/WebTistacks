@@ -9,7 +9,7 @@ const Hero = () => {
           <h1>Transformando ideias em soluções digitais</h1>
           <p>Especialistas em criar experiências digitais inovadoras para microempresas</p>
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">Fale Conosco</a>
+            <a href="/contact" className="btn btn-primary">Fale Conosco</a>
             <a href="#about" className="btn btn-secondary">Saiba Mais</a>
           </div>
         </div>
