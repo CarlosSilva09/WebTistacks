@@ -10,6 +10,7 @@ const ContactPage = () => {
         <p>Email: contato@webtistacks.com</p>
         <p>Suporte: suporte@webtistacks.com</p>
         <p>Telefone: (11) 99999-9999</p>
+        <p>CNPJ: 00.000.000/0001-00</p>
       </div>
       <ContactForm />
     </section>
