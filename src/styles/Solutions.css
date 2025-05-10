@@ -8,15 +8,25 @@
 .solutions-section h2 {
   color: #2563eb;
   font-size: 2.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.1rem;
   font-weight: 700;
 }
+
+.solutions-section h4 {
+  color: #000000;
+  font-size: 1.13rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 
 .solutions-cards {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  
 }
 
 .solution-card {
@@ -27,13 +37,20 @@
   flex: 1 1 200px;
   max-width: 220px;
   font-weight: 600;
-  color: #2563eb;
+  color: #000000;
   display: flex;
+  flex-direction: column; /* Altera a direção para coluna */
   align-items: center;
   justify-content: center;
   font-size: 1.125rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: 1rem; /* Aumenta o espaçamento abaixo do ícone */
+  color: #2563eb;
 }
 
 .solution-card:hover {
