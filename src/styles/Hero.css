@@ -1,13 +1,13 @@
 .hero-section {
   position: relative;
   height: 90vh;
-  background-image: url('https://i.postimg.cc/3RvsYjwf/Templete.png');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 0 2rem;
 }
 
 .hero-overlay {
@@ -16,17 +16,35 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(37, 99, 235, 0.7); /* blue overlay with opacity */
+  background-color: #ebeff3;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-content {
   position: relative;
-  text-align: center;
-  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
   padding: 0 1rem;
+  color: black;
+  z-index: 2;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-image {
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 2rem;
 }
 
 .hero-content h1 {
@@ -43,7 +61,26 @@
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  /* Para deixar os botões em coluna */
+  justify-content: flex-start; /* Alinha os botões à esquerda */
 }
 
 .btn {
@@ -67,7 +104,8 @@
 .btn-secondary {
   background-color: transparent;
   border: 2px solid white;
-  color: white;
+  color: #2563eb;
+  border-color: #2563eb;
 }
 
 .btn-secondary:hover {
@@ -75,18 +113,41 @@
   color: #2563eb;
 }
 
+.hero-image {
+  position: relative;
+  max-width: 50%; /* Largura máxima da imagem */
+  height: 100%;
+  background-image: url('https://i.postimg.cc/3RvsYjwf/Templete.png'); /* Repetindo a imagem aqui ou pode usar um elemento de imagem real */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px; /* Se desejar bordas arredondadas na imagem */
+}
+
 @media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Para telas pequenas, empilha o conteúdo em coluna */
+    padding: 1rem;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
+
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
   }
+
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .hero-image {
+    display: none; /* Esconde a imagem em telas pequenas */
   }
 }
