@@ -32,9 +32,19 @@
   box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
   flex: 1 1 200px;
   max-width: 250px;
-  text-align: left;
+  text-align: center; /* Centraliza texto e ícones */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+
+}
+
+.card .icon {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
 }
 
 .card:hover {
