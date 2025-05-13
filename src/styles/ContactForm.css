@@ -6,7 +6,7 @@
 }
 
 .contact-section h2 {
-  color: #2563eb;
+  color: #0d5aff;
   font-size: 2.25rem;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -40,7 +40,7 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #0d5aff;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
 }
 
@@ -57,4 +57,15 @@
 
 .btn-primary:hover {
   background-color: #1e40af;
+}
+
+/* Formulário de contato adaptado para ocupar 100% da largura no mobile */
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 0.75rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
 }

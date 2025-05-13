@@ -7,11 +7,21 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #dee1e4;
+  background-color: #f8f8f8;
   color: #1f2937;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Tons alternados de branco para seções */
+.bg-white-100 {
+  background-color: #f8f8f8; /* Branco puro */
+}
+
+.bg-white-200 {
+  background-color: #f3f3f3; /* Branco um pouco acinzentado */
 }
 
 a {

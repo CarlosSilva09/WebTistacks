@@ -6,7 +6,7 @@
 }
 
 .about-section h2 {
-  color: #2563eb;
+  color: #0d5aff;
   font-size: 2.25rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -14,7 +14,7 @@
 
 .about-section p {
   font-size: 1.125rem;
-  color: #4b5563;
+  color: #090016;
   margin-bottom: 2rem;
 }
 
@@ -43,11 +43,23 @@
 }
 
 .card .icon {
-  color: #2563eb;
+  color: #0d5aff;
   margin-bottom: 0.75rem;
 }
 
 .card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+}
+
+/* Cartões do "Sobre nós" ficam empilhados verticalmente no mobile */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
 }

@@ -12,7 +12,8 @@ import Projects from './components/Projects';
 import Blog from './components/Blog';
 import ContactPage from './components/ContactPage';
 
-import './styles/App.css';
+import './styles/App.css'; 
+import './styles/global.css'; 
 
 function App() {
   return (
@@ -22,11 +23,25 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Hero />
-              <About />
-              <Solutions />
-              <WhyChooseUs />
-              <Testimonials />
+              <div className="bg-white-100 full-width">
+                <Hero />
+              </div>
+
+              <div className="bg-white-200 full-width">
+                <About />
+              </div>
+
+              <div className="bg-white-200 full-width">
+                <Solutions />
+              </div>
+
+              <div className="bg-white-100 full-width">
+                <WhyChooseUs />
+              </div>
+
+              <div className="bg-white-100 sfull-width">
+                <Testimonials />
+              </div>
             </>
           } />
           <Route path="/projects" element={<Projects />} />

@@ -6,7 +6,7 @@
 }
 
 .testimonials-section h2 {
-  color: #2563eb;
+  color: #0d5aff;
   font-size: 2.25rem;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -27,7 +27,7 @@
   flex: 1 1 250px;
   max-width: 300px;
   font-style: italic;
-  color: #374151;
+  color: #1c1920;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,6 +36,18 @@
 .testimonial-card h4 {
   margin-top: 1rem;
   font-weight: 600;
-  color: #2563eb;
+  color: #0d5aff;
   text-align: right;
+}
+
+/* Deixa os depoimentos empilhados verticalmente em telas pequenas */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
 }

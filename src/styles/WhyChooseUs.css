@@ -6,10 +6,15 @@
 }
 
 .why-choose-section h2 {
-  color: #2563eb;
+  color: #0d5aff;
   font-size: 2.25rem;
   margin-bottom: 2rem;
   font-weight: 700;
+}
+
+.why-section h2{
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .why-cards {
@@ -27,7 +32,7 @@
   flex: 1 1 200px;
   max-width: 220px;
   font-weight: 600;
-  color: #2563eb;
+  color: #0d5aff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,4 +44,16 @@
 .why-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+}
+
+/* Empilha os motivos em coluna para melhor legibilidade no celular */
+@media (max-width: 768px) {
+  .why-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-card {
+    max-width: 100%;
+  }
 }

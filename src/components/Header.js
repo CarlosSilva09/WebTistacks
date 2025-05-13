@@ -1,32 +1,51 @@
-import React from 'react';
+// Componente do cabeçalho com navegação e menu hambúrguer para telas pequenas
+
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <nav className="nav">
         <div className="logo">
           <Link to="/">WebTIstacks</Link>
         </div>
-        <ul className="nav-links">
+          
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li>
-            <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="/" end onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => (isActive ? 'active' : '')}>
               Início
             </NavLink>
           </li>
           <li>
-            <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="/projects" onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => (isActive ? 'active' : '')}>
               Projetos
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="/blog" onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => (isActive ? 'active' : '')}>
               Blog
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="/contact" onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => (isActive ? 'active' : '')}>
               Contato
             </NavLink>
           </li>

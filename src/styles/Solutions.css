@@ -13,7 +13,7 @@
 }
 
 .solutions-section h4 {
-  color: #000000;
+  color: #090016;
   font-size: 1.13rem;
   margin-bottom: 2rem;
   font-weight: 400;
@@ -37,7 +37,7 @@
   flex: 1 1 200px;
   max-width: 220px;
   font-weight: 600;
-  color: #000000;
+  color: #090016;
   display: flex;
   flex-direction: column; /* Altera a direção para coluna */
   align-items: center;
@@ -50,10 +50,22 @@
 
 .icon {
   margin-bottom: 1rem; /* Aumenta o espaçamento abaixo do ícone */
-  color: #2563eb;
+  color: #0d5aff;
 }
 
 .solution-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+}
+
+/* Ajuste das cartas de soluções para layout em coluna no mobile */
+@media (max-width: 768px) {
+  .solutions-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .solution-card {
+    max-width: 100%;
+  }
 }
