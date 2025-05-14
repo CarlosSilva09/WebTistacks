@@ -34,8 +34,8 @@
   padding: 2rem 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-  flex: 1 1 200px;
-  max-width: 220px;
+  width: 220px; /* Largura fixa */
+  height: 220px; /* Altura fixa */
   font-weight: 600;
   color: #090016;
   display: flex;
@@ -46,6 +46,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   text-align: center;
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse o card */
 }
 
 .icon {

@@ -31,7 +31,7 @@ function App() {
                 <About />
               </div>
 
-              <div className="bg-white-200 full-width">
+              <div className="bg-white-100 full-width">
                 <Solutions />
               </div>
 

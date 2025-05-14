@@ -30,7 +30,8 @@
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
   flex: 1 1 200px;
-  max-width: 220px;
+  width: 220px; /* Largura fixa */
+  height: 220px;/* Altura fixa */
   font-weight: 600;
   color: #0d5aff;
   display: flex;
@@ -39,6 +40,7 @@
   font-size: 1.125rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse o card */
 }
 
 .why-card:hover {
