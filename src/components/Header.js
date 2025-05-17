@@ -19,9 +19,9 @@ const Header = () => {
         </div>
           
         <div className="hamburger" onClick={toggleMenu}>
-          <span className={menuOpen ? 'bar open' : 'bar'}></span>
-          <span className={menuOpen ? 'bar open' : 'bar'}></span>
-          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+          <span className={`bar bar1 ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`bar bar2 ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`bar bar3 ${menuOpen ? 'open' : ''}`}></span>
         </div>
 
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
