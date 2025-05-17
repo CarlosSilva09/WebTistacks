@@ -1,5 +1,5 @@
 .footer-section {
-  background-color: #05318f;
+  background-color: #003747;
   color: white;
   padding: 2rem 1rem;
   margin-top: 4rem;
@@ -54,12 +54,28 @@
   flex-direction: column;
 }
 
+.footer-icon {
+  margin-right: 10px;
+  color: #ffffff; /* or your preferred color */
+  width: 16px;
+}
+
+.social-icon {
+  margin-right: 10px;
+  color: #ffffff; /* or your preferred color */
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+}
+
 .footer-copy {
   width: 100%;
   text-align: center;
   margin-top: 2rem;
   font-size: 0.875rem;
-  color: #d1d5db;
+  color: #ffffff;
 }
 
 /* Rodapé reorganizado para visualização vertical em telas pequenas */

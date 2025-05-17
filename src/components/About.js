@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <h2>Nossa História</h2>
-      <p>Desde 2020, transformando o mercado digital com soluções inovadoras e personalizadas</p>
+      <p>Desde 2020, transformando o mercado digital com soluções inovadoras e personalizadas.</p>
 
       <div className="cards-container">
         <div className="card">
