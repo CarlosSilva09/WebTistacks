@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -16,6 +16,12 @@ import './styles/App.css';
 import './styles/global.css'; 
 
 function App() {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
+
   return (
     <Router>
       <Header />
@@ -50,6 +56,22 @@ function App() {
         </Routes>
       </main>
       <Footer />
+
+      {/* Assistente Virtual */}
+      <div className="virtual-assistant-container">
+        <div className="assistant-bubble" onClick={togglePopup}>
+          <img src="/images/robozinho.gif" alt="Assistente Virtual" />
+        </div>
+
+        <div className={`assistant-popup ${isPopupVisible ? 'active' : ''}`}>
+          <div className="assistant-header">
+            <strong>Stackii</strong>
+          </div>
+          <div className="assistant-body">
+            <p>Oi! Precisa de ajuda com algo? 👋</p>
+          </div>
+        </div>
+      </div>
     </Router>
   );
 }
