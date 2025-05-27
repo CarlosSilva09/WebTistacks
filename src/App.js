@@ -9,7 +9,7 @@ import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
-import Blog from './components/Blog';
+import Support from './components/Support.js';
 import ContactPage from './components/ContactPage';
 
 import './styles/App.css'; 
@@ -51,7 +51,7 @@ function App() {
             </>
           } />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/support" element={<Support />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>

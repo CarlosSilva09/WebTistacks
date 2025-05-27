@@ -38,9 +38,9 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blog" onClick={() => setMenuOpen(false)}
+            <NavLink to="/support" onClick={() => setMenuOpen(false)}
               className={({ isActive }) => (isActive ? 'active' : '')}>
-              Blog
+              Suporte
             </NavLink>
           </li>
           <li>
