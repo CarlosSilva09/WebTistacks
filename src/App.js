@@ -11,17 +11,11 @@ import Footer from './components/Footer';
 import Projects from './components/Projects';
 import Support from './components/Support.js';
 import ContactPage from './components/ContactPage';
-<<<<<<< HEAD
 import { FaWhatsapp } from 'react-icons/fa';
 import { AnimatePresence } from 'framer-motion';
 import PageTransition from './components/PageTransition';
-=======
-
-import { FaWhatsapp } from 'react-icons/fa';
-
->>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
-import './styles/App.css'; 
-import './styles/global.css'; 
+import './styles/App.css';
+import './styles/global.css';
 
 // Componente para detectar rota e resetar animações
 function AnimationResetter({ resetAnimations }) {
@@ -35,16 +29,10 @@ function AnimationResetter({ resetAnimations }) {
   return null;
 }
 
-<<<<<<< HEAD
 function AppContent({ resetAnimations }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [step, setStep] = useState('inicio');
   const location = useLocation();
-=======
-function App() {
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const [step, setStep] = useState('inicio');
->>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
 
   const togglePopup = () => {
     setIsPopupVisible(!isPopupVisible);
@@ -83,7 +71,6 @@ function App() {
     };
   }, []);
 
-<<<<<<< HEAD
   return (
     <>
       <AnimationResetter resetAnimations={resetAnimations} />
@@ -129,51 +116,6 @@ function App() {
             } />
           </Routes>
         </AnimatePresence>
-=======
-  // Função para resetar as animações (remove e adiciona a classe visible)
-  const resetAnimations = useCallback(() => {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.remove('visible');
-      void section.offsetWidth; // força reflow para reiniciar animação
-      section.classList.add('visible');
-    });
-  }, []);
-
-  return (
-    <Router>
-      <AnimationResetter resetAnimations={resetAnimations} />
-      <Header onResetAnimations={resetAnimations} />
-      <main>
-        <Routes>
-          <Route path="/" element={
-            <>
-              <section className="bg-white-100 section-slide">
-                <Hero />
-              </section>
-
-              <section className="bg-white-200 section-slide">
-                <About />
-              </section>
-
-              <section className="bg-white-100 section-slide">
-                <Solutions />
-              </section>
-
-              <section className="bg-white-100 section-slide">
-                <WhyChooseUs />
-              </section>
-
-              <section className="bg-white-100 section-slide">
-                <Testimonials />
-              </section>
-            </>
-          } />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
->>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
       </main>
       <Footer />
 
@@ -239,7 +181,6 @@ function App() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
   );
 }
@@ -259,8 +200,6 @@ function App() {
   return (
     <Router>
       <AppContent resetAnimations={resetAnimations} />
-=======
->>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
     </Router>
   );
 }
