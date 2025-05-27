@@ -69,7 +69,7 @@ function AppContent({ resetAnimations }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [location]); // Agora roda sempre que a rota mudar
 
   return (
     <>
@@ -205,10 +205,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
