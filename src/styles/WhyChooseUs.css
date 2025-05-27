@@ -1,0 +1,61 @@
+.why-choose-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-choose-section h2 {
+  color: #0d5aff;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.why-section h2{
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  flex: 1 1 200px;
+  width: 220px; /* Largura fixa */
+  height: 220px;/* Altura fixa */
+  font-weight: 600;
+  color: #0d5aff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse o card */
+}
+
+.why-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+}
+
+/* Empilha os motivos em coluna para melhor legibilidade no celular */
+@media (max-width: 768px) {
+  .why-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-card {
+    max-width: 100%;
+  }
+}
