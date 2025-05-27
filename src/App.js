@@ -81,7 +81,8 @@ function AppContent({ resetAnimations }) {
             <Route path="/" element={
               <PageTransition>
                 <>
-                  <section className="bg-white-100 section-slide">
+                  {/* Primeira seção já visível */}
+                  <section className="bg-white-100 section-slide visible">
                     <Hero />
                   </section>
                   <section className="bg-white-200 section-slide">

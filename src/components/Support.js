@@ -37,7 +37,7 @@ const plans = [
 export default function Support() {
   return (
     <div>
-      <section className="section-slide">
+      <section className="section-slide visible">
         <div 
           className="suporte-intro"
           style={{
