@@ -34,7 +34,7 @@ const plans = [
   },
 ];
 
-export default function SuporteTecnico() {
+export default function Support() {
   return (
     <div>
       {/* Nova seção adicionada */}
@@ -73,7 +73,6 @@ export default function SuporteTecnico() {
   </div>
 </div>
 
-<<<<<<< HEAD
       <section className='canais'>
         <h6>
           Além disso, contamos também com outros canais para que você possa falar com a gente
@@ -107,51 +106,6 @@ export default function SuporteTecnico() {
           </div>
         </div>
       </section>
-=======
-      <div className='canais'>
-  <h6>
-    Além disso, contamos também com outros canais para que você possa falar com a gente
-  </h6>
-  
-  <div className="channels-container">
-    {/* Imagem da girl pointing */}
-    <div className="girl-pointing-container">
-      <img 
-        src='./images/girl-pointing.png' 
-        alt="Profissional apontando" 
-        className="girl-pointing-image"
-      />
-    </div>
-    
-    {/* Cards dos canais */}
-    <div className="channel-cards">
-      {/* Card WhatsApp */}
-      <div className="channel-card whatsapp-card">
-        <div className="channel-icon">📱</div>
-        <h3>WhatsApp</h3>
-        <p>Suporte rápido e direto pelo WhatsApp Business</p>
-        <button className="channel-button">Enviar mensagem</button>
-      </div>
-      
-      {/* Card Site */}
-      <div className="channel-card site-card">
-        <div className="channel-icon">🌐</div>
-        <h3>Site</h3>
-        <p>Formulário de contato em nosso site</p>
-        <button className="channel-button">Acessar site</button>
-      </div>
-      
-      {/* Card Help Desk */}
-      <div className="channel-card helpdesk-card">
-        <div className="channel-icon">🛎️</div>
-        <h3>Help Desk</h3>
-        <p>Sistema completo de tickets para seu negócio</p>
-        <button className="channel-button">Abrir ticket</button>
-      </div>
-    </div>
-  </div>
-</div>
->>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
       
       
       <div className="suporte-container">
