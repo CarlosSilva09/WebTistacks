@@ -1,0 +1,244 @@
+.testimonials-section {
+  padding: 6rem 2rem; /* Aumentei o padding vertical */
+  max-width: 1400px; /* Aumentei a largura máxima */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  color: #0d5aff;
+  font-size: 2.5rem; /* Aumentei o tamanho da fonte */
+  margin-bottom: 3rem; /* Aumentei o espaçamento inferior */
+  font-weight: 700;
+}
+
+.testimonials-slider {
+  margin-top: 3rem;
+  min-height: 400px; /* Altura mínima garantida */
+  padding-bottom: 60px; /* Espaço para os dots sem cortar conteúdo */
+}
+
+/* Ajuste para o container dos cards */
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 380px; /* Altura mínima maior que a dos cards */
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  font-style: italic;
+  color: #1c1920;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 250px; /* Alterado de max-width para width fixo */
+  height: 300px; /* Adicionado altura igual à largura */
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Efeito de brilho ao passar o mouse */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #f7f9ff, #e9efff);
+  z-index: -1;
+  transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: right;
+}
+
+.testimonial-card:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease 0.4s;
+}
+
+.testimonial-card:hover::before {
+  border-color: #c3c9ff;
+}
+
+/* Ativa a animação acima sem a necessidade de passar o mouse */
+.slick-center .testimonial-card {
+  transform: scale(1.05) translateY(-5px);
+  opacity: 1;
+  z-index: 2;
+}
+
+.slick-center .testimonial-card::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.slick-center .testimonial-card::before {
+  border-color: #c3c9ff;
+}
+
+/* Efeitos de hover - Agora aplicam-se apenas aos NÃO centrais */
+.slick-slide:not(.slick-center) .testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.slick-slide:not(.slick-center) .testimonial-card:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.slick-slide:not(.slick-center) .testimonial-card:hover::before {
+  border-color: #c3c9ff;
+}
+
+.testimonial-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 2px solid #0d5aff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-comment p {
+  margin: 0;
+  font-family: "Century Gothic", sans-serif;
+}
+
+.testimonial-name {
+  margin-top: 1rem; /* Ajuste conforme desejar */
+  font-weight: 600;
+  font-size: 15px;
+  color: #0d5aff;
+  text-align: center;
+  font-family: "Century Gothic", sans-serif;
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  color: #555;
+  font-family: "Century Gothic", sans-serif;
+}
+
+/* Espaçamento natural entre slides (ajustável) */
+.slick-slide {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Suaviza a transição dos slides */
+.slick-slider {
+  overflow: visible;
+}
+
+/* Deixa os cards laterais mais apagados */
+.slick-slide:not(.slick-center) .testimonial-card {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Card central ganha destaque */
+.slick-center .testimonial-card {
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Ajuste para os dots do slider */
+.slick-dots {
+  bottom: 20px; /* Posicionamento mais alto */
+}
+
+.slick-dots li button:before {
+  top: 0; /* Reset da posição */
+  font-size: 12px;
+  color: #0d5aff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0d5aff;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Removendo destaque e opacidade no mobile */
+  .slick-slide:not(.slick-center) .testimonial-card,
+  .slick-center .testimonial-card {
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+  }
+}
+
+/* Responsivo para celulares pequenos (≤ 480px) */
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .testimonial-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .testimonial-name {
+    font-size: 13px;
+  }
+
+  .testimonial-role {
+    font-size: 0.75rem;
+  }
+
+  /* Reforço para celular: sem destaque/escala/opacidade */
+  .slick-slide:not(.slick-center) .testimonial-card,
+  .slick-center .testimonial-card {
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+  }
+}

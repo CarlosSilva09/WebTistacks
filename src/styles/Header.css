@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+  background-color: #0d5aff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  color: white;
+  font-weight: 1500;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: "Lilita One", sans-serif;
+  transition: transform 0.3s ease;
+  display: inline-block; /* necessário para aplicar transform corretamente */
+}
+
+.logo a:hover {
+  transform: scale(1.1); /* aumenta 10% */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: rgb(245, 210, 10); /* amarelo destaque */
+}
+
+
+/* Estilos para o menu hambúrguer responsivo */
+.hamburger {
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Animação ao abrir (vira um X) */
+.bar1.open {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.bar2.open {
+  opacity: 0;
+}
+
+.bar3.open {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Só mostra o hambúrguer em telas pequenas */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hamburger sempre visível em telas pequenas */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.973);
+    position: absolute;
+    top: 78px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 999;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links li a {
+  color: #0d5aff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+  color: rgb(245, 210, 10); /* amarelo destaque */
+  }
+}
+

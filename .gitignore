@@ -1,0 +1,88 @@
+# ========================
+# 📦 DEPENDÊNCIAS
+# ========================
+node_modules/
+.pnp/
+.pnp.js
+.pnpm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ========================
+# 🧪 TESTES
+# ========================
+coverage/
+*.lcov
+
+# ========================
+# 🛠️ BUILD / DIST
+# ========================
+build/
+dist/
+.next/
+out/
+
+# ========================
+# ⚙️ CONFIGS DE AMBIENTE
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# 🧠 CACHE / LOGS / TEMP
+# ========================
+.cache/
+.vite/
+logs/
+*.log
+*.tmp
+
+# ========================
+# 💻 IDEs e Editores
+# ========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+
+# ========================
+# 🍏 Arquivos do Mac
+# ========================
+.DS_Store
+
+# ========================
+# 🪟 Arquivos do Windows
+# ========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================
+# 📸 Arquivos de imagem de prévia
+# ========================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# ========================
+# 🔍 Outros
+# ========================
+*.bak
+*.old
+*.orig
+*.log
+*.zip
+*.tar.gz
+
+# Ignorar pastas que começam com ponto
+.*.swp

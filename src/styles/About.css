@@ -1,0 +1,65 @@
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: #0d5aff;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 1.125rem;
+  color: #090016;
+  margin-bottom: 2rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center; /* Centraliza texto e ícones */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+
+}
+
+.card .icon {
+  color: #0d5aff;
+  margin-bottom: 0.75rem;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
+}
+
+/* Cartões do "Sobre nós" ficam empilhados verticalmente no mobile */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
