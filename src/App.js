@@ -60,7 +60,7 @@ function App() {
       {/* Assistente Virtual */}
       <div className="virtual-assistant-container">
         <div className="assistant-bubble" onClick={togglePopup}>
-          <img src="/images/robozinho.gif" alt="Assistente Virtual" />
+          <img src="/images/robozinhoo.gif" alt="Assistente Virtual" />
         </div>
 
         <div className={`assistant-popup ${isPopupVisible ? 'active' : ''}`}>
