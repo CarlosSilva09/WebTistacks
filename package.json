@@ -7,7 +7,10 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+<<<<<<< HEAD
     "framer-motion": "^12.15.0",
+=======
+>>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",

@@ -164,6 +164,7 @@
 }
 
 .bg-image img {
+<<<<<<< HEAD
   max-width: 400px;
 }
 
@@ -268,3 +269,8 @@
     flex-direction: column;
   }
 }
+=======
+    
+  max-width: 400px;
+}
+>>>>>>> 8172bed01435fce07d45277dd0b1c8dea0894afd
