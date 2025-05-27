@@ -144,7 +144,7 @@ function AppContent({ resetAnimations }) {
               <>
                 <p>Você pode ver nossos planos em nossa página ou conversar com um consultor pelo WhatsApp.</p>
                 <a
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/5515988420236"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-btn"
