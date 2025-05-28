@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 .suporte-intro {
   text-align: center;
   padding: 40px 20px;
   background-color: #f8f9fa;
   margin-bottom: 30px;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-left: calc(-50vw + 50%);
 }
 
 .suporte-intro h1 {
@@ -22,27 +32,6 @@
   margin: 0 auto;
   line-height: 1.6;
 }
-
-/* Estilos para o container da imagem */
-.girl-pointing-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-  width: 100%;
-}
-
-/* Estilos para a imagem em si */
-.girl-pointing-image {
-  width: auto; /* Tamanho reduzido - ajuste conforme necessário */
-  height: 600px;
-  max-width: 100%;
-  object-fit: contain;
-  justify-content: right;
-  display: flex;
-}
-
 
 .suporte-container {
   padding: 50px 20px;
@@ -83,6 +72,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  align-items: stretch;
 }
 
 .plano-card {
@@ -94,6 +84,11 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 450px;
+  cursor: pointer;
 }
 
 .plano-card:hover {
@@ -105,15 +100,23 @@
   font-weight: bold;
   color: #003366;
   margin-bottom: 10px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preco-antigo {
+  color: #888;
+  margin: 10px 0;
 }
 
 .preco-antigo span {
   text-decoration: line-through;
-  color: #888;
 }
 
 .preco-novo {
-  color: #0077cc;
+  color: #0d5aff;
   font-size: 18px;
   margin: 10px 0;
 }
@@ -123,11 +126,26 @@
   padding: 0;
   margin: 15px 0;
   text-align: left;
+  flex-grow: 1;
+  margin-bottom: 15px;
 }
 
 .plano-card li {
-  margin: 8px 0;
+  margin: 12px 0;
   font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.plano-card li i {
+  margin-right: 10px;
+  color: #0077cc;
+  min-width: 20px;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: auto;
 }
 
 .plano-badge {
@@ -144,8 +162,7 @@
 }
 
 .cta-button {
-  margin-top: 15px;
-  background-color: #0077cc;
+  background-color: #0d5aff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -153,6 +170,8 @@
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
+  width: 100%;
+  cursor: pointer;
 }
 
 .cta-button:hover {
@@ -163,11 +182,7 @@
   border-top: 4px solid #3f51b5;
 }
 
-.bg-image img {
-  max-width: 400px;
-}
-
-/* Modernized styles for canais section */
+/* Estilos para a seção de canais */
 .canais {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -194,8 +209,6 @@
   gap: 2rem;
   align-items: center;
 }
-
-/* Removed styles for girl-pointing image as it was removed from the component */
 
 .channel-cards {
   flex: 2 1 500px;
@@ -256,15 +269,27 @@
 }
 
 @media (max-width: 768px) {
+  .suporte-intro {
+    height: auto;
+    padding: 80px 20px;
+  }
+  
   .channels-container {
     flex-direction: column;
   }
-  .girl-pointing-container,
-  .channel-cards {
-    max-width: 100%;
-    flex: none;
-  }
+  
   .channel-cards {
     flex-direction: column;
+    width: 100%;
+  }
+  
+  .plano-card {
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .planos {
+    flex-direction: column;
+    align-items: center;
   }
 }

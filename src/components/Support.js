@@ -7,8 +7,8 @@ const plans = [
     oldPrice: 'R$1,27',
     newPrice: 'R$0,64/minuto',
     features: [
-      'Atendimento dentro dos canais oficiais de suporte',
-      'Tempo de solução varia conforme complexidade',
+      {text: 'Atendimento dentro dos canais oficiais de suporte', icon: 'fa-headset'},
+      {text: 'Tempo de solução varia conforme complexidade', icon: 'fa-clock'},
     ],
   },
   {
@@ -16,9 +16,9 @@ const plans = [
     oldPrice: 'R$423,90',
     newPrice: 'R$349,99/mês',
     features: [
-      'Atendimento personalizado',
-      'Manutenção periódica',
-      'Treinamento e capacitação da equipe',
+      {text: 'Atendimento personalizado', icon: 'fa-user-tie'},
+      {text: 'Manutenção periódica', icon: 'fa-sync-alt'},
+      {text: 'Treinamento e capacitação da equipe', icon: 'fa-graduation-cap'},
     ],
   },
   {
@@ -27,9 +27,9 @@ const plans = [
     newPrice: 'R$949,99/mês',
     badge: '⭐ RECOMENDADO',
     features: [
-      'Hospedagem premium + suporte 24h',
-      'Gestão de marketing digital completa',
-      'Atendimento direto com especialistas (sem robôs)',
+      {text: 'Hospedagem premium + suporte 24h', icon: 'fa-server'},
+      {text: 'Gestão de marketing digital completa', icon: 'fa-bullhorn'},
+      {text: 'Atendimento direto com especialistas (sem robôs)', icon: 'fa-users'},
     ],
   },
 ];
@@ -125,10 +125,14 @@ export default function Support() {
                 <p className="preco-novo">💰 <strong>{plan.newPrice}</strong></p>
                 <ul>
                   {plan.features.map((item, idx) => (
-                    <li key={idx}>✅ {item}</li>
+                    <li key={idx}>
+                      <i className={`fas ${item.icon}`}></i> {item.text}
+                    </li>
                   ))}
                 </ul>
-                <button className="cta-button">Contratar agora</button>
+                <div className="button-container">
+                  <button className="cta-button">Contratar agora</button>
+                </div>
               </div>
             ))}
           </div>
